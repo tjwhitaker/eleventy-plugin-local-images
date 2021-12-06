@@ -110,7 +110,7 @@ const processImageSrcset = async (img) => {
 const processImage = async (img) => {
   let { distPath, assetPath, attribute } = config
 
-  const external = /https?:\/\/\w+(:[0-9]*)?(\.\w+)?\/?(\/[.\w]*)*$/i
+  const external = /https?:\/\/[^\/]+\//i
   const attr = attribute
     .split(",")
     .map((attr) => attr.trim())
